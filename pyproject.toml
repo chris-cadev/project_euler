@@ -1,0 +1,11 @@
+[project]
+authors = [
+  {name = "Christian Camacho", email = "chris.ca.dev@gmail.com"},
+]
+dependencies = []
+description = "Default template for PDM package"
+license = {text = "MIT"}
+name = "project-euler"
+readme = "README.md"
+requires-python = "==3.11.*"
+version = "0.1.0"
