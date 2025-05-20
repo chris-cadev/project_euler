@@ -15,8 +15,8 @@ def is_palindromic(n: int):
 
 def main():
     found = 0
-    for a in r:
-        for b in r:
+    for i, a in enumerate(r):
+        for b in r[i:]:
             product = a * b
             if is_palindromic(product) and product > found:
                 print(f'{product} = {a} * {b}')
