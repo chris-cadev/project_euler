@@ -6,8 +6,23 @@ The largest palindrome made from the product of two 2-digit numbers is 9009 = 91
 Find the largest palindrome made from the product of two 3-digit numbers.
 """
 
+r = list(reversed(range(100, 1000)))
+
+
+def is_palindromic(n: int):
+    return f'{n}' == f'{n}'[::-1]
+
+
 def main():
-    print('project euler p4')
+    found = 0
+    for a in r:
+        for b in r:
+            product = a * b
+            if is_palindromic(product) and product > found:
+                print(f'{product} = {a} * {b}')
+                found = product
+    print(found)
+
 
 if __name__ == '__main__':
     main()
