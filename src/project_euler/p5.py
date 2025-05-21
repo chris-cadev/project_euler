@@ -13,19 +13,19 @@ def is_divisible_from_to(n, start, end):
     return True
 
 
-def f(a: int, b: int) -> int:
+def find_smallest_number_divisible(a: int, b: int) -> int:
     found = None
-    n = 1
+    n = b
     while not found:
         if not is_divisible_from_to(n, a, b):
-            n += 1
+            n += b
             continue
         found = n
     return found
 
 
 def main():
-    print(f(1, 10))
+    print(find_smallest_number_divisible(1, 19))
 
 
 if __name__ == '__main__':
